@@ -19,7 +19,23 @@ const MacContainer = () => {
     let data = useScroll();
 
     useFrame((state, delta) => {
-        meshes.screen.rotation.x = THREE.MathUtils.degToRad(180 - data.offset * 90)
+        meshes.screen.rotation.x = THREE.MathUtils.degToRad(180 - data.offset * 90);
+
+        // Keep main title intact, but fade out secondary text & buttons as the screen rises
+        const detailsEl = document.getElementById('hero-details');
+        if (detailsEl) {
+            const progress = Math.min(1, Math.max(0, data.offset * 3));
+            detailsEl.style.opacity = (1 - progress).toString();
+            detailsEl.style.transform = `translateY(-${progress * 24}px)`;
+            detailsEl.style.pointerEvents = progress > 0.4 ? 'none' : 'auto';
+        }
+
+        // Fade out bottom scroll prompt as soon as user begins scrolling
+        const scrollHint = document.getElementById('scroll-hint');
+        if (scrollHint) {
+            const hintProgress = Math.min(1, Math.max(0, data.offset * 5));
+            scrollHint.style.opacity = (1 - hintProgress).toString();
+        }
     });
 
     return (
