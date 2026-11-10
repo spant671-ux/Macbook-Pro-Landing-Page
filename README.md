@@ -1,4 +1,4 @@
-# MacBook Pro 3D Landing Page 💻✨
+# MacBook Pro 3D Landing Page 💻
 
 An Apple-inspired interactive 3D landing page clone showcasing the MacBook Pro, featuring real-time 3D rendering, scroll-driven animations, and authentic Apple typography and UI polish.
 
