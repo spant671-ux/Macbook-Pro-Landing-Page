@@ -6,7 +6,7 @@ import MacContainer from './MacContainer'
 const App = () => {
   return (
     <div className='w-full h-screen relative bg-black font-["Helvetica_Now_Display","Helvetica_Neue","Helvetica",Arial,sans-serif] overflow-hidden select-none'>
-      {/* Top Navigation Bar */}
+      {/* Top Navbar */}
       <nav className='navbar line w-[90%] max-w-[1020px] flex items-center justify-between pt-6 pb-3 absolute top-0 left-1/2 -translate-x-1/2 z-20'>
         <a href="#" className='text-white text-base hover:opacity-75 transition-opacity'>
           <i className="ri-apple-fill"></i>
@@ -14,10 +14,10 @@ const App = () => {
         {[
           "Store",
           "Mac",
-          "iPad", 
-          "iPhone", 
-          "Watch", 
-          "AirPods", 
+          "iPad",
+          "iPhone",
+          "Watch",
+          "AirPods",
           "Home",
           "Entertainment",
           "Accessories",
@@ -77,7 +77,7 @@ const App = () => {
         <i className="ri-arrow-down-s-line text-sm animate-bounce"></i>
       </div>
 
-      {/* 3D Scene */}
+      {/* 3D Canvas */}
       <Canvas camera={{ fov: 12, position: [0, -10, 220] }}>
         <ambientLight intensity={1.2} />
         <directionalLight position={[10, 10, 10]} intensity={1.5} />
